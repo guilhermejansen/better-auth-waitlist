@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Better Auth Documentation
+    url: https://www.better-auth.com/docs
+    about: Check the Better Auth documentation for general auth questions
+  - name: Better Auth Discussions
+    url: https://github.com/better-auth/better-auth/discussions
+    about: Ask questions in the Better Auth community discussions

@@ -1,0 +1,91 @@
+name: Bug Report
+description: Report a bug in better-auth-waitlist
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the information below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of the bug.
+      placeholder: Describe what happened...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Configure the plugin with...
+        2. Call the endpoint...
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin Version
+      description: "Version of better-auth-waitlist"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: better-auth-version
+    attributes:
+      label: Better Auth Version
+      placeholder: "1.4.18"
+    validations:
+      required: true
+  - type: dropdown
+    id: adapter
+    attributes:
+      label: Database Adapter
+      options:
+        - Prisma
+        - Drizzle
+        - Kysely
+        - MongoDB
+        - SQLite (better-sqlite3)
+        - MySQL
+        - PostgreSQL
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      placeholder: "22.0.0"
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Other
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context, logs, or screenshots.
