@@ -38,17 +38,11 @@
   },
   "typesVersions": {
     "*": {
-      "*": [
-        "./dist/index.d.mts"
-      ],
-      "client": [
-        "./dist/client.d.mts"
-      ]
+      "*": ["./dist/index.d.mts"],
+      "client": ["./dist/client.d.mts"]
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "keywords": [
     "better-auth",
     "auth",
@@ -78,11 +72,7 @@
     }
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3",
-      "esbuild",
-      "@biomejs/biome"
-    ]
+    "onlyBuiltDependencies": ["better-sqlite3", "esbuild", "@biomejs/biome"]
   },
   "devDependencies": {
     "@better-auth/core": "1.4.18",
