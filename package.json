@@ -1,5 +1,5 @@
 {
-  "name": "better-auth-waitlist",
+  "name": "@guilhermejansen/better-auth-waitlist",
   "version": "0.1.0",
   "type": "module",
   "description": "Waitlist / early-access plugin for Better Auth. Intercepts all registration paths and gates sign-ups behind an invite-based waitlist.",

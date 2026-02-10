@@ -1,14 +1,14 @@
-# better-auth-waitlist
+# @guilhermejansen/better-auth-waitlist
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/better-auth-waitlist"><img src="https://img.shields.io/npm/v/better-auth-waitlist?style=flat-square&color=cb3837&label=npm" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/better-auth-waitlist"><img src="https://img.shields.io/npm/dm/better-auth-waitlist?style=flat-square&color=blue" alt="npm downloads"></a>
-  <a href="https://github.com/guilhermejansen/better-auth-waitlist/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/better-auth-waitlist?style=flat-square&color=green" alt="license"></a>
-  <a href="https://github.com/guilhermejansen/better-auth-waitlist/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/guilhermejansen/better-auth-waitlist/ci.yml?style=flat-square&label=CI" alt="CI"></a>
+  <a href="https://www.npmjs.com/package/@guilhermejansen/better-auth-waitlist"><img src="https://img.shields.io/npm/v/@guilhermejansen/better-auth-waitlist?style=flat-square&color=cb3837&label=npm" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@guilhermejansen/better-auth-waitlist"><img src="https://img.shields.io/npm/dm/@guilhermejansen/better-auth-waitlist?style=flat-square&color=blue" alt="npm downloads"></a>
+  <a href="https://github.com/guilhermejansen/better-auth-waitlist/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@guilhermejansen/better-auth-waitlist?style=flat-square&color=green" alt="license"></a>
+  <a href="https://github.com/guilhermejansen/better-auth-waitlist/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/guilhermejansen/better-auth-waitlist/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"></a>
   <br>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.9+-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"></a>
   <a href="https://www.better-auth.com"><img src="https://img.shields.io/badge/Better_Auth-^1.0.0-6c47ff?style=flat-square" alt="Better Auth"></a>
-  <a href="https://bundlephobia.com/package/better-auth-waitlist"><img src="https://img.shields.io/bundlephobia/minzip/better-auth-waitlist?style=flat-square&label=bundle%20size&color=e8590c" alt="bundle size"></a>
+  <a href="https://bundlephobia.com/package/@guilhermejansen/better-auth-waitlist"><img src="https://img.shields.io/bundlephobia/minzip/@guilhermejansen/better-auth-waitlist?style=flat-square&label=bundle%20size&color=e8590c" alt="bundle size"></a>
   <a href="https://github.com/guilhermejansen/better-auth-waitlist"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
@@ -36,19 +36,19 @@ A [Better Auth](https://www.better-auth.com) community plugin that adds **waitli
 ## Installation
 
 ```bash
-npm install better-auth-waitlist
+npm install @guilhermejansen/better-auth-waitlist
 ```
 
 ```bash
-pnpm add better-auth-waitlist
+pnpm add @guilhermejansen/better-auth-waitlist
 ```
 
 ```bash
-bun add better-auth-waitlist
+bun add @guilhermejansen/better-auth-waitlist
 ```
 
 ```bash
-yarn add better-auth-waitlist
+yarn add @guilhermejansen/better-auth-waitlist
 ```
 
 ## Quick Start
@@ -58,7 +58,7 @@ yarn add better-auth-waitlist
 ```typescript
 import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins/admin";
-import { waitlist } from "better-auth-waitlist";
+import { waitlist } from "@guilhermejansen/better-auth-waitlist";
 
 export const auth = betterAuth({
   // ... your config
@@ -82,7 +82,7 @@ export const auth = betterAuth({
 
 ```typescript
 import { createAuthClient } from "better-auth/client";
-import { waitlistClient } from "better-auth-waitlist/client";
+import { waitlistClient } from "@guilhermejansen/better-auth-waitlist/client";
 
 export const authClient = createAuthClient({
   plugins: [waitlistClient()],
@@ -298,7 +298,7 @@ The plugin exports `WAITLIST_ERROR_CODES` for programmatic error handling:
 | `UNAUTHORIZED_ADMIN_ACTION` | You are not authorized to perform this action |
 
 ```typescript
-import { WAITLIST_ERROR_CODES } from "better-auth-waitlist";
+import { WAITLIST_ERROR_CODES } from "@guilhermejansen/better-auth-waitlist";
 
 if (error.message === WAITLIST_ERROR_CODES.NOT_APPROVED) {
   // Handle not approved
