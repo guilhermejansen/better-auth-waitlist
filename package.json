@@ -1,0 +1,93 @@
+{
+  "name": "better-auth-waitlist",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Waitlist / early-access plugin for Better Auth. Intercepts all registration paths and gates sign-ups behind an invite-based waitlist.",
+  "author": "Guilherme Jansen",
+  "license": "MIT",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul",
+    "lint:package": "publint run --strict",
+    "lint:types": "attw --profile esm-only --pack .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": {
+      "dev-source": "./src/index.ts",
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./client": {
+      "dev-source": "./src/client.ts",
+      "types": "./dist/client.d.mts",
+      "default": "./dist/client.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./dist/index.d.mts"],
+      "client": ["./dist/client.d.mts"]
+    }
+  },
+  "files": ["dist"],
+  "keywords": [
+    "better-auth",
+    "auth",
+    "waitlist",
+    "early-access",
+    "invite",
+    "plugin",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermejansen/better-auth-waitlist.git"
+  },
+  "homepage": "https://github.com/guilhermejansen/better-auth-waitlist#readme",
+  "dependencies": {
+    "zod": "^4.3.5"
+  },
+  "peerDependencies": {
+    "@better-auth/core": "^1.0.0",
+    "better-auth": "^1.0.0",
+    "better-call": "^1.0.0",
+    "nanostores": "^1.0.1"
+  },
+  "peerDependenciesMeta": {
+    "nanostores": {
+      "optional": true
+    }
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3", "esbuild", "@biomejs/biome"]
+  },
+  "devDependencies": {
+    "@better-auth/core": "1.4.18",
+    "@better-fetch/fetch": "1.1.21",
+    "@biomejs/biome": "^1.9.4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/bun": "^1.3.8",
+    "@types/node": "^25.2.2",
+    "better-auth": "1.4.18",
+    "better-call": "1.1.8",
+    "better-sqlite3": "^12.6.2",
+    "nanostores": "^1.1.0",
+    "tsdown": "^0.20.3",
+    "type-fest": "^5.4.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

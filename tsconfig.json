@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "incremental": true,
+    "noErrorTruncation": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "types": ["node", "bun"],
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "outDir": "./node_modules/.cache/ts/out",
+    "tsBuildInfoFile": "./node_modules/.cache/ts/tsbuildinfo",
+    "customConditions": ["dev-source"]
+  },
+  "include": ["./src"],
+  "exclude": ["**/dist/**", "**/node_modules/**"]
+}
