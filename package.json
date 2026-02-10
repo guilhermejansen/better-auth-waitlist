@@ -57,6 +57,9 @@
     "url": "git+https://github.com/guilhermejansen/better-auth-waitlist.git"
   },
   "homepage": "https://github.com/guilhermejansen/better-auth-waitlist#readme",
+  "bugs": {
+    "url": "https://github.com/guilhermejansen/better-auth-waitlist/issues"
+  },
   "dependencies": {
     "zod": "^4.3.5"
   },

@@ -1,6 +1,21 @@
 // NOTE: Error code const must be all capital of string (ref https://github.com/better-auth/better-auth/issues/4386)
 import { defineErrorCodes } from "@better-auth/core/utils";
 
+/**
+ * Error codes returned by the waitlist plugin endpoints.
+ *
+ * Use these constants to match errors programmatically instead of
+ * comparing raw strings.
+ *
+ * @example
+ * ```typescript
+ * import { WAITLIST_ERROR_CODES } from "@guilhermejansen/better-auth-waitlist";
+ *
+ * if (error.message === WAITLIST_ERROR_CODES.NOT_APPROVED) {
+ *   // redirect to waitlist page
+ * }
+ * ```
+ */
 export const WAITLIST_ERROR_CODES = defineErrorCodes({
 	EMAIL_ALREADY_IN_WAITLIST: "This email is already on the waitlist",
 	WAITLIST_ENTRY_NOT_FOUND: "Waitlist entry not found",

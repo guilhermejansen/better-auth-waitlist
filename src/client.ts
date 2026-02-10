@@ -12,6 +12,32 @@ interface WaitlistStats {
 	registered: number;
 }
 
+/**
+ * Client-side waitlist plugin for Better Auth.
+ *
+ * Provides typed helper methods (`join`, `status`, `verifyInvite`) and
+ * reactive atoms for waitlist stats that automatically refresh when
+ * admin actions (approve/reject) are performed.
+ *
+ * @param _options - Optional client configuration.
+ * @returns A `BetterAuthClientPlugin` instance to pass to `createAuthClient({ plugins: [...] })`.
+ *
+ * @example
+ * ```typescript
+ * import { createAuthClient } from "better-auth/client";
+ * import { waitlistClient } from "@guilhermejansen/better-auth-waitlist/client";
+ *
+ * const auth = createAuthClient({
+ *   plugins: [waitlistClient()],
+ * });
+ *
+ * // Join the waitlist
+ * await auth.waitlist.join({ email: "user@example.com" });
+ *
+ * // Check status
+ * const { data } = await auth.waitlist.status({ email: "user@example.com" });
+ * ```
+ */
 export const waitlistClient = (_options?: WaitlistClientOptions) => {
 	const $waitlistSignal = atom<boolean>(false);
 

@@ -34,6 +34,34 @@ const DEFAULT_INTERCEPT_PATHS = [
 	"/siwe/verify",
 ];
 
+/**
+ * Waitlist plugin for Better Auth.
+ *
+ * Gates all registration paths behind an invite-based waitlist system.
+ * New sign-ups are intercepted at the request level and via database hooks,
+ * ensuring no unapproved user can be created regardless of the auth method
+ * (email/password, OAuth, magic-link, OTP, etc.).
+ *
+ * @param options - Configuration options for the waitlist plugin.
+ * @returns A `BetterAuthPlugin` instance to pass to `betterAuth({ plugins: [...] })`.
+ *
+ * @example
+ * ```typescript
+ * import { betterAuth } from "better-auth";
+ * import { waitlist } from "@guilhermejansen/better-auth-waitlist";
+ *
+ * export const auth = betterAuth({
+ *   plugins: [
+ *     waitlist({
+ *       requireInviteCode: true,
+ *       sendInviteEmail: async ({ email, inviteCode }) => {
+ *         await sendEmail({ to: email, subject: "You're in!", body: inviteCode });
+ *       },
+ *     }),
+ *   ],
+ * });
+ * ```
+ */
 export const waitlist = (options?: WaitlistOptions) => {
 	const opts: WaitlistOptions = {
 		enabled: true,
